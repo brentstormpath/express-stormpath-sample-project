@@ -1,0 +1,27 @@
+extends base
+
+block vars
+    - var title = 'Profile'
+
+block body
+    .container
+        if user
+            h1.text-center Profile Page
+        .row
+            .col-xs-12.col-md-offset-2.col-md-8
+                .jumbotron.text-justify
+                    p Enter your profile information below and click save
+                    form.form-group(method='post')
+                        label Favorite Color:
+                        if user.customData.address
+                            input.form-control(type='text', name='favoriteColor', value=user.customData.favoriteColor, placeholder= '#{user.customData.address}')
+                        else
+                            input.form-control(type='text', name='favoriteColor', value=user.customData.favoriteColor, placeholder= 'What\s your favorite color?')
+                        label Address:
+                        if user.customData.address
+                            input.form-control(type='text', name='address', value=user.customData.address, placeholder= '#{user.customData.address}')
+                        else
+                            input.form-control(type='text', name='address', value=user.customData.address, placeholder= 'What\s your address?')
+                        br
+                        input.btn.btn-default(type='submit', value='Save')
+

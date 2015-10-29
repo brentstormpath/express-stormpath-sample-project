@@ -1,0 +1,24 @@
+extends base
+
+block vars
+    - var title = 'Home'
+
+block body
+    .container.home
+        if user
+            h1.text-center Welcome back, #{user.givenName}!
+        else
+            h1.text-center Welcome!
+        .row
+            .col-xs-12.col-md-offset-2.col-md-8
+                .jumbotron.text-justify
+                        p Ready to begin? Try these Stormpath features out:
+                            ol.lead
+                                li
+                                    a(href="/register") Registration
+                                li
+                                    a(href="/login") Login
+                                li
+                                    a(href="/forgot") Password Reset
+                                li
+                                    a(href="/profile") Custom Profile Data

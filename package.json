@@ -1,0 +1,22 @@
+{
+  "name": "express-stormpath-sample-project",
+  "version": "0.0.0",
+  "description": "Sample application to demonstrate functionality of Express-Stormpath",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Stormpath",
+    "Express",
+    "Express-Stormpath",
+    "webapp"
+  ],
+  "author": "Stormpath",
+  "license": "Apache 2.0",
+  "dependencies": {
+    "express": "^4.13.3",
+    "express-stormpath": "^2.0.14",
+    "jade": "^1.11.0"
+  }
+}

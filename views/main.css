@@ -1,0 +1,17 @@
+/*
+ * Navbar settings.
+ */
+ul.nav.navbar-nav {
+    float: right;
+}
+
+li.create-account > a {
+    color: #fff !important;
+}
+
+/*
+ * Home page settings.
+ */
+.home h1 {
+    color: #000080;
+}

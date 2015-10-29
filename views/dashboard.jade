@@ -1,0 +1,17 @@
+extends base
+
+block vars
+    - var title = 'Dashboard'
+
+block body
+    .container
+        if user
+            h1.text-center Sample Dashboard
+        .row
+            .col-xs-12.col-md-offset-2.col-md-8
+                .jumbotron.text-justify
+                    if user
+                        p Name: #{user.fullName}
+                        p Email: #{user.email}
+                        p
+                            a.lead(href="profile") Edit my profile
